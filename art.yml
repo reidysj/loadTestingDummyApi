@@ -1,0 +1,13 @@
+config:
+  target: "http://localhost:5000"
+  tls:
+    reectUnauthorized: false
+  phases:
+    - duration: 100
+      arrivalRate: 1
+      name: "testing"
+scenarios:
+  - name: "Test oi link"
+    flow:
+      - get:
+          url: "/linkFragment"
